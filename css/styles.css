@@ -1,0 +1,64 @@
+body {
+  margin: 0;
+  color: #fff;
+  background-color: #050048;
+
+}
+
+main {
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+min-height: 100vh;
+}
+
+.dropZone {
+display: flex;
+justify-content: center;
+align-items: center;
+width: 50%;
+height: 30vh;
+border: 2px solid #34fff5;
+}
+
+.p_interno{
+font-size: 18px;
+animation: sombraTexto 3s infinite;
+}
+
+.dropZone.is-active {
+border: 2px dashed #fff;
+background-color: #02ff0280;
+animation: contenidoInterno 1.5s infinite;
+animation-timing-function: linear;
+}
+
+@keyframes sombraTexto {
+0%
+{
+  font-size: 20px;
+  text-shadow: 1px 5px 15px #02ff0280;
+}
+50% {
+  font-size: 21px;
+  text-shadow: 1px 5px 15px #02ff0280, 1px 5px 15px #02ff0280;
+}
+
+100% {
+  font-size: 20px;
+  text-shadow: 1px 5px 15px #02ff0280, 1px 5px 15px #02ff0280, 1px 5px 15px #02ff0280;
+}
+}
+
+@keyframes contenidoInterno {
+0% {
+  transform: scale(1);
+}
+50% {
+  transform: scale(1.1);
+}
+100% {
+  transform: scale(1.2);
+}
+}
